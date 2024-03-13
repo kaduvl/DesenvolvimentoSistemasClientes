@@ -1,0 +1,60 @@
+public class Cliente
+{
+    private int id;
+    private string nome;
+    private string endereco;
+
+    public Cliente(int id, string nome, string endereco)
+    {
+        this.id = id;
+        this.nome = nome;
+        this.endereco = endereco;
+    }
+
+    public int GetId()
+    {
+        return id;
+    }
+
+    public void SetId(int id)
+    {
+        this.id = id;
+    }
+
+    public string GetNome()
+    {
+        return nome;
+    }
+
+    public void SetNome(string nome)
+    {
+        this.nome = nome;
+    }
+
+    public string GetEndereco()
+    {
+        return endereco;
+    }
+
+    public void SetEndereco(string endereco)
+    {
+        this.endereco = endereco;
+    }
+
+    public override string ToString()
+    {
+        return $"Cliente: {{id: {id}, nome: {nome}, endereco: {endereco}}}";
+    }
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        Cliente cliente1 = new Cliente(1, "João Silva", "Rua A, 123");
+        Console.WriteLine(cliente1.ToString());
+
+        cliente1.SetNome("Maria Silva");
+        Console.WriteLine(cliente1.ToString());
+    }
+}
